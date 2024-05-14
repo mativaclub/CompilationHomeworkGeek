@@ -1,0 +1,8 @@
+services:
+  app:
+   image: bells-oft/liberica-openjdk-alpine:11.0.16.1-1
+   command: javadoc-source path /app/src-cp /app/out-d /app/doc - subpackages geek
+   volumes:
+    - ./bin:/app/out
+    - ./src:/app/src
+    - ./doc:/app/doc
